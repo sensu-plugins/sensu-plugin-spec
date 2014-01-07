@@ -1,24 +1,33 @@
 # Sensu::Plugin::Spec
 
-TODO: Write a gem description
+The test suite for testing various implementations of `sensu-plugin` in different languages.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'sensu-plugin-spec'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install sensu-plugin-spec
+```
+gem install sensu-plugin-spec
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+``` shell
+bundle install
+bundle exec ./bin/sensu-plugin-spec
+```
+
+Which will output something along the lines of:
+
+```
+Run options: --seed 59897
+
+# Running:
+
+........
+
+Finished in 2.082529s, 3.8415 runs/s, 3.8415 assertions/s.
+
+8 runs, 8 assertions, 0 failures, 0 errors, 0 skips
+```
 
 ## Contributing
 
