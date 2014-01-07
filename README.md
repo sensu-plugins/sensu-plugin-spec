@@ -1,11 +1,5 @@
 The test suite for testing various implementations of `sensu-plugin` in different languages.
 
-## Installation
-
-```
-gem install sensu-plugin-spec
-```
-
 ## Usage
 
 ``` shell
