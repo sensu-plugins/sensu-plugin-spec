@@ -1,9 +1,19 @@
+require 'optparse'
+
 module SensuPluginSpec
   class ServiceCheck < Minitest::Test
     include Helper
 
     def setup
-      set_script "test/bin/service-check"
+      options = {
+        :path => 'test/bin'
+      }
+      OptionParser.new do |opts|
+        opts.on("-p", "--path PATH", "Foo") do |p|
+          options[:path] = p
+        end
+      end.parse!
+      set_script "#{options[:path]}/service-check"
     end
 
     def test_ok
